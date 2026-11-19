@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zad — Privacy Policy / سياسة الخصوصية</title>
+<style>
+  :root{
+    --paper:#fbf6ee; --surface:#fffdf9; --ink:#0c1310; --muted:#5b635c;
+    --line:#ded5c5; --gold:#a8843c; --warn-bg:#fff6e2; --warn-line:#d9a441;
+    --accent:#1f5c4a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font:16px/1.85 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 22px 80px}
+  header.top{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+  .brand{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h1{font:700 30px/1.4 Georgia,"Noto Serif",serif;margin:6px 0 4px}
+  [dir=rtl] h1{font-family:"Amiri",Georgia,serif;font-size:34px}
+  .sub{color:var(--muted);font-size:14px}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+  button{font:inherit;font-size:14px;cursor:pointer;padding:7px 16px;border-radius:999px;
+    border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+  button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .notice{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;
+    padding:14px 16px;margin:22px 0 30px;font-size:14px}
+  .notice strong{color:#7a5310}
+  section[hidden]{display:none}
+  h2{font:700 24px/1.4 Georgia,serif;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  [dir=rtl] h2{font-family:"Amiri",Georgia,serif;font-size:28px}
+  h3{font:700 17px/1.5 Georgia,serif;margin:24px 0 8px;color:var(--accent)}
+  [dir=rtl] h3{font-family:"Amiri",Georgia,serif;font-size:21px}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-inline-start:22px}
+  li{margin:5px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;line-height:1.65}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:start;vertical-align:top}
+  th{background:#f3ece0;font-weight:700}
+  code{background:#f1eadf;padding:1px 5px;border-radius:4px;font-size:.9em;direction:ltr;unicode-bidi:isolate}
+  .tc{background:var(--warn-bg);border:1px dashed var(--warn-line);border-radius:4px;
+    padding:0 4px;color:#6d4c0d;font-size:.92em;unicode-bidi:isolate}
+  .meta{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0}
+  .meta div{margin:5px 0}
+  .key{font-weight:700;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  @media print{.toolbar{display:none}section[hidden]{display:block!important}
+    body{background:#fff}.wrap{max-width:none}section{page-break-before:always}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">Zad · زاد</div>
+    <h1>Privacy Policy <span dir="rtl" lang="ar">— سياسة الخصوصية</span></h1>
+    <div class="sub">Android release · Karim Elhabbal · Egypt</div>
+    <div class="toolbar" role="group" aria-label="Language">
+      <button id="btn-en" aria-pressed="true" onclick="setLang('en')">English</button>
+      <button id="btn-ar" aria-pressed="false" onclick="setLang('ar')">العربية</button>
+      <button id="btn-both" aria-pressed="false" onclick="setLang('both')">Both / الاثنتان</button>
+    </div>
+  </header>
+
+  <!-- ============================ ENGLISH ============================ -->
+  <section id="en" lang="en">
+    <div class="meta">
+      <div><span class="key">Last updated</span> 16 November 2026</div>
+      <div><span class="key">Publisher</span> Karim Elhabbal, Egypt — Android app <code>com.karimelhabbal.zad</code></div>
+      <div><span class="key">Contact</span> <a href="mailto:zad.quran.app@gmail.com">zad.quran.app@gmail.com</a></div>
+      <div><span class="key">Scope</span> This policy covers the Android release of Zad.</div>
+    </div>
+
+    <h2>1. The short version</h2>
+    <p>The Qur'an text, the tafsir, the 604 Mushaf pages and their fonts, the adhkar, and the prayer-time and Qibla calculations are <strong>bundled inside the app and work without an internet connection</strong>. There is <strong>no account, no sign-in, no ads, no Analytics SDK and no advertising SDK</strong>. Almost everything you create — settings, bookmarks, your reading position, dhikr counters — is stored only on your device.</p>
+    <p>Six kinds of requests can leave your device: technical crash reports in release builds, recitation audio requests, the live-radio stream when you start it, a coordinate lookup used to name your location, a city-name search you type, and anything you deliberately share through the system share sheet.</p>
+
+    <h2>2. Data that leaves your device</h2>
+    <table>
+      <tr><th>#</th><th>What leaves</th><th>When</th><th>Where</th><th>Contents / why</th></tr>
+      <tr><td>1</td><td><strong>Crash and error reports</strong><br>(Release builds only)</td><td>App crash or unhandled asynchronous error</td><td>Firebase Crashlytics (Google), project <code>chatmax-7d311</code>, Firebase app <code>com.karimelhabbal.zad</code></td><td>Technical reports: the exception, stack trace and framework error context produced by our code, to diagnose and fix crashes. Collection is enabled in Release and disabled in Debug. We do <strong>not</strong> set a user id, custom keys or breadcrumb logs, and we do not set an advertising identifier. The Crashlytics SDK may attach its own standard technical metadata (for example device/OS/app version, timestamps, session data, a Firebase Installation ID and the IP address seen at Google's endpoint). The exact fields, endpoints and retention are set by the SDK and the Firebase project, not by this app.</td></tr>
+      <tr><td>2</td><td><strong>Recitation audio requests</strong></td><td>Playing or downloading a recitation, including the one-byte <code>Range</code> capability probe</td><td><code>cdn.islamic.network</code>, <code>everyayah.com</code>, <code>cdn.mp3quran.net</code></td><td>The URL path (reciter id, surah or ayah number, bitrate), standard HTTP headers and the IP address seen by the server — to stream or download the recitation you chose. No account or user identifier is added by the app. Each host controls its own access logs and retention; the app does not set them.</td></tr>
+      <tr><td>3</td><td><strong>Live radio stream</strong><br>(enabled in the published app)</td><td>Only when you start the radio</td><td><code>stream.radiojar.com</code> is the <strong>only</strong> relay the app uses. It redirects to a tokenised <code>*.radiojar.com</code> edge node. Radiojar serves the live stream of إذاعة القرآن الكريم من القاهرة; the broadcaster is named in the app.</td><td>A continuous audio connection plus a one-byte <code>Range</code> request used to resolve the redirect. If the stream stalls, the app silently requests the same URL again so a fresh token rejoins the live feed; it never switches to another broadcaster or a delayed rebroadcast. The app uploads nothing. Radiojar's redirect points at a cleartext HTTP edge; the app upgrades radiojar hostnames to HTTPS before handing the URL to the player.</td></tr>
+      <tr><td>4</td><td><strong>Coordinate lookup</strong></td><td>When a device GPS fix needs a readable place name — not for a manually chosen city</td><td><code>nominatim.openstreetmap.org</code> (OpenStreetMap / Nominatim)</td><td>Latitude and longitude rounded to 5 decimals, a language code and <code>User-Agent: Zad/1.0 (Quran reading app)</code>. The returned place name is cached on your device. Nominatim's usage policy, logging and attribution requirements are governed by that service, not by this app.</td></tr>
+      <tr><td>5</td><td><strong>City-name search</strong></td><td>Only when you type a city name in the location picker</td><td><code>geocoding-api.open-meteo.com</code> (Open-Meteo geocoding)</td><td>The text you typed, a language code and standard request metadata. Open-Meteo controls its own logs and retention; the app does not set them.</td></tr>
+      <tr><td>6</td><td><strong>Anything you choose to share</strong></td><td>Only when you tap Share or export a backup</td><td>The app or destination <strong>you</strong> pick from the OS share sheet / file picker</td><td>Ayah or adhkar text, or a plain (unencrypted) JSON backup of your local data. It leaves only because you asked to share it.</td></tr>
+    </table>
+    <p><strong>We do not send</strong> your reading history, bookmarks, reading position, dhikr counters, preferences, contacts, photos, files, or any identifier generated by our code. The backup is created locally in a temporary folder; the app never uploads it. It is <strong>plain, unencrypted JSON</strong> — store it carefully once exported.</p>
+    <p>Crash reporting is enabled in Release and disabled in Debug. <strong>There is no in-app switch to turn crash reporting off.</strong></p>
+
+    <h2>3. Data stored on your device only</h2>
+    <ul>
+      <li><strong>Preferences and records</strong> in the app's private storage: theme and language, display settings, calculation method, notification toggles and reminder times, selected reciter, a <strong>manually chosen</strong> location (coordinates and city name), cached place names, last reading position, bookmarks, pages read today, custom adhkar, dhikr counters, progress, statistics and targets.</li>
+      <li><strong>Downloaded recitations</strong> (MP3 files you asked to keep) and a bounded playback-fallback cache, in the app's private support directory.</li>
+      <li><strong>Mushaf page fonts</strong> extracted from bundled assets into the app's private documents directory. They use a <strong>50 MiB cache</strong>: older cached font files are evicted when that limit is exceeded, and the remaining files stay until uninstall.</li>
+      <li><strong>Scheduled local notifications</strong> for up to 12 days, held by the OS; a reminder title, its time and an internal route name only.</li>
+      <li><strong>An exported backup file</strong> in the system temporary directory, until you share or delete it. The app does not delete it and does not control when the OS clears that directory.</li>
+    </ul>
+    <p>There is no server-side account, no cloud database and no user profile.</p>
+
+    <h2>4. Permissions and why</h2>
+    <table>
+      <tr><th>Permission</th><th>Why</th></tr>
+      <tr><td>Approximate / precise location</td><td>Compute prayer times and the Qibla <strong>on your device</strong>. You may deny it and enter a city or coordinates manually; the app keeps working.</td></tr>
+      <tr><td>Notifications</td><td>Prayer-time, adhkar and daily-portion reminders, scheduled locally — no push server.</td></tr>
+      <tr><td>Schedule exact alarms</td><td>Use exact alarms for those local reminders where Android grants the permission. The app checks the grant and falls back to inexact alarms when it is not granted.</td></tr>
+      <tr><td>Boot completed</td><td>Re-arm those local reminders after a restart.</td></tr>
+      <tr><td>Internet</td><td>Recitation streaming and downloads, live radio, the two location lookups and crash-report delivery.</td></tr>
+      <tr><td>Foreground service (media playback) + wake lock</td><td>Keep a recitation playing in the background, and (if you enable it) keep the screen awake while reading.</td></tr>
+      <tr><td>Vibrate</td><td>Haptic feedback in the tasbeeh counter; it can be switched off.</td></tr>
+      <tr><td>Compass sensor (optional hardware feature)</td><td>Point the Qibla needle; the app also installs on devices without a compass.</td></tr>
+    </table>
+
+    <h2>5. What Zad does not do</h2>
+    <ul>
+      <li>No advertisements and no advertising SDK.</li>
+      <li>No Analytics SDK, no marketing or attribution SDK and no behavioural profiling.</li>
+      <li>No account, no sign-up, no login, no password and no cloud sync.</li>
+      <li>No advertising ID, and no user or device identifier set by our code.</li>
+      <li>No access to contacts, photos, camera, microphone, SMS, call logs, or your files beyond the backup file you pick yourself.</li>
+      <li>No sale, rental or sharing of your data for advertising, and no cross-app or cross-site tracking.</li>
+    </ul>
+    <p>Crashlytics is an <strong>error-reporting</strong> SDK, not an Analytics SDK. A Google Analytics property linked to the Firebase project does <strong>not</strong> mean this app collects Analytics data: the application contains no Analytics SDK and sends no Analytics events. Crash reporting has no in-app opt-out; it runs only in Release builds.</p>
+
+    <h2>6. How long data is kept</h2>
+    <table>
+      <tr><th>Data</th><th>Retention</th></tr>
+      <tr><td>Preferences, bookmarks, position, counters, cached place names</td><td>Until you tap <strong>Reset app data</strong> or uninstall.</td></tr>
+      <tr><td>Downloaded recitations</td><td>Until you delete them on the downloads screen, uninstall, or the 1 GiB cap removes the oldest files.</td></tr>
+      <tr><td>Playback-fallback cache</td><td>Until you tap <strong>Clear stream cache</strong>, uninstall, or the 128 MiB cap removes the oldest files.</td></tr>
+      <tr><td>Mushaf fonts</td><td>Cached up to 50 MiB in the app's private documents directory; the app evicts older cached fonts when that limit is exceeded, and remaining files are removed on uninstall.</td></tr>
+      <tr><td>Scheduled reminders</td><td>A rolling 12-day window; cancelled as soon as all reminders are off.</td></tr>
+      <tr><td>Exported backup file</td><td>Until you delete it or the OS clears its temporary directory. The app does not control the OS cleanup schedule.</td></tr>
+      <tr><td>Crash reports</td><td>Retention and deletion are controlled by the Firebase project and Google, not by app code. Contact us if you need help locating or requesting deletion of such data.</td></tr>
+      <tr><td>Logs held by audio, radio and geocoding hosts</td><td>Controlled by each provider under its own policy; the app does not set retention periods and cannot inspect those logs.</td></tr>
+    </table>
+
+    <h2>7. Your choices</h2>
+    <ul>
+      <li><strong>Location:</strong> deny the permission, or turn off “use my location” and pick a city or enter coordinates manually. No coordinate lookup is made for a manual location.</li>
+      <li><strong>Notifications:</strong> turn off prayer, morning/evening adhkar and daily-portion reminders; turning all off cancels every pending notification.</li>
+      <li><strong>Downloads:</strong> delete one recitation, <strong>delete all downloads</strong>, or <strong>clear the stream cache</strong>.</li>
+      <li><strong>Reset:</strong> “Reset app data” clears preferences, bookmarks, position and counters. It does <strong>not</strong> delete downloaded audio, the stream cache, cached fonts or an exported backup — clear those separately.</li>
+      <li><strong>Backup:</strong> export to a file you own, or restore from a file you choose; nothing is uploaded automatically.</li>
+      <li><strong>Crash reporting:</strong> no in-app opt-out; it is enabled only in Release builds.</li>
+      <li><strong>Uninstall:</strong> removes all app-private data, including downloads and cached fonts.</li>
+      <li><strong>Vibration / screen awake:</strong> both are optional settings.</li>
+    </ul>
+
+    <h2>8. Children's privacy</h2>
+    <p>Zad is a general-audience religious app. It has no accounts, no sign-up, no chat, no social features, no user profile, no age gate and no free-text field other than a city search box. We do not knowingly collect personal information from children, and we do not use the app to contact children.</p>
+    <p>The app code does not determine an age rating or the legal obligations that may apply to children's data; those must be assessed by the publisher under the rules of the store and the jurisdictions where the app is offered.</p>
+    <p>If you believe a child has provided personal information through the app, contact <a href="mailto:zad.quran.app@gmail.com">zad.quran.app@gmail.com</a>.</p>
+
+    <h2>9. Third-party services</h2>
+    <p>The app sends requests to: Firebase Crashlytics (Google) for Release crash reports; <code>cdn.islamic.network</code>, <code>everyayah.com</code> and <code>cdn.mp3quran.net</code> for recitation audio; <code>stream.radiojar.com</code> and its tokenised <code>*.radiojar.com</code> edge nodes for the live radio; <code>nominatim.openstreetmap.org</code> to name a device location; and <code>geocoding-api.open-meteo.com</code> for city search. They receive only what section 2 describes. Their own privacy policies, processing terms and log retention govern what they keep; the app does not set those terms.</p>
+    <p>The device position itself is obtained through Android's location APIs; on devices with Google Play services, the operating-system provider may involve Google, whose own handling is outside this app's code.</p>
+
+    <h2>10. Security</h2>
+    <p>Your data is kept in the app's private, sandboxed storage. The URLs the app is configured to open are HTTPS. The exported backup is plain, <strong>unencrypted</strong> JSON — protect it like any file you share.</p>
+    <p><code>stream.radiojar.com</code> answers with a redirect to a cleartext HTTP edge. The app resolves that redirect itself and upgrades <strong>radiojar hostnames</strong> to HTTPS before handing the URL to the player, so the radiojar playback URL is HTTPS and no app-wide cleartext permission is enabled. Other third-party hosts and any redirects they issue are outside the app's control; this policy does not guarantee that every possible redirect from a third party remains HTTPS. Transport encryption inside the Crashlytics SDK is controlled by that SDK and Google, not by app code.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>We may update this policy when the app changes; the “Last updated” date at the top will change, and the current version will always be available at this page.</p>
+
+    <h2>12. Contact us</h2>
+    <p>Questions, corrections or deletion requests: <a href="mailto:zad.quran.app@gmail.com">zad.quran.app@gmail.com</a>. Publisher: Karim Elhabbal, Egypt.</p>
+  </section>
+
+  <!-- ============================ ARABIC ============================ -->
+  <section id="ar" lang="ar" dir="rtl" hidden>
+    <div class="meta">
+      <div><span class="key">آخر تحديث</span> ١٦ نوفمبر ٢٠٢٦</div>
+      <div><span class="key">الناشر</span> Karim Elhabbal، مصر — تطبيق أندرويد <code>com.karimelhabbal.zad</code></div>
+      <div><span class="key">التواصل</span> <a href="mailto:zad.quran.app@gmail.com" dir="ltr">zad.quran.app@gmail.com</a></div>
+      <div><span class="key">النطاق</span> تغطي هذه السياسة نسخة أندرويد من «زاد».</div>
+    </div>
+
+    <h2>١. الخلاصة</h2>
+    <p>نص القرآن الكريم، والتفسير الميسر، وصفحات المصحف الـ٦٠٤ وخطوطها، والأذكار، وحساب مواقيت الصلاة واتجاه القبلة، كلها <strong>مضمّنة داخل التطبيق وتعمل دون اتصال بالإنترنت</strong>. لا يوجد <strong>حسابات ولا تسجيل دخول ولا إعلانات ولا حزمة تحليلات ولا حزمة إعلانات</strong>. كل ما تنشئه تقريبًا — الإعدادات، العلامات المرجعية، موضع القراءة، عدّادات الأذكار — يُحفظ على جهازك وحده.</p>
+    <p>ستة أنواع من الطلبات قد تغادر جهازك: تقارير الأعطال التقنية في نسخ الإصدار فقط، وطلبات ملفات التلاوة، وبثّ الإذاعة الحيّ عند تشغيله، والاستعلام عن الإحداثيات لتسمية موقعك، والبحث عن مدينة تكتبها بنفسك، وأي شيء تختار مشاركته عبر قائمة المشاركة في النظام.</p>
+
+    <h2>٢. البيانات التي تغادر جهازك</h2>
+    <table>
+      <tr><th>#</th><th>ما يغادر</th><th>متى</th><th>إلى أين</th><th>المحتوى والسبب</th></tr>
+      <tr><td>١</td><td><strong>تقارير الأعطال والأخطاء</strong><br>(نسخ الإصدار فقط)</td><td>عند تعطّل التطبيق أو خطأ غير مُعالَج</td><td>Firebase Crashlytics (Google)، المشروع <code>chatmax-7d311</code>، وتطبيق Firebase <code>com.karimelhabbal.zad</code></td><td>تقارير تقنية: الاستثناء ومسار التنفيذ وسياق الخطأ الذي يولّده كودنا، لتشخيص الأعطال وإصلاحها. الجمع مفعّل في نسخ الإصدار ومعطّل في نسخ التطوير. <strong>لا نضيف</strong> معرّف مستخدم ولا مفاتيح مخصصة ولا سجلات ولا معرّف إعلاني. قد تضيف حزمة Crashlytics من نفسها بيانات تقنية قياسية (مثل إصدار الجهاز/النظام/التطبيق، والطوابع الزمنية، وبيانات الجلسة، وFirebase Installation ID، وعنوان IP الذي تراه Google). الحقول والعناوين الدقيقة ومدة الاحتفاظ يضبطها الـ SDK ومشروع Firebase، لا كود هذا التطبيق.</td></tr>
+      <tr><td>٢</td><td><strong>طلبات ملفات التلاوة</strong></td><td>عند تشغيل تلاوة أو تنزيلها، بما في ذلك فحص <code>Range</code> ببايت واحد</td><td><code>cdn.islamic.network</code>، <code>everyayah.com</code>، <code>cdn.mp3quran.net</code></td><td>مسار الرابط (معرّف القارئ، رقم السورة أو الآية، معدّل البت)، وترويسات HTTP المعتادة، وعنوان IP الذي يراه الخادم — لبثّ أو تنزيل التلاوة التي اخترتها. لا يضيف التطبيق أي معرّف حساب أو مستخدم. سجلات الدخول والاحتفاظ لدى كل مضيف يضبطها المضيف وحده.</td></tr>
+      <tr><td>٣</td><td><strong>بثّ الإذاعة الحيّ</strong><br>(مفعّل في النسخة المنشورة)</td><td>عند تشغيل الإذاعة فقط</td><td><code>stream.radiojar.com</code> هو <strong>المُرحِّل الوحيد</strong> الذي يستخدمه التطبيق، ويُعيد التوجيه إلى عقدة <code>*.radiojar.com</code> مميّزة برمز مؤقت. يقدّم Radiojar البث الحيّ لإذاعة القرآن الكريم من القاهرة، واسم الجهة الباثّة ظاهر داخل التطبيق.</td><td>اتصال صوتي مستمر، مع فحص <code>Range</code> ببايت واحد لحلّ إعادة التوجيه. وإذا توقّف البث يعيد التطبيق طلب الرابط نفسه بصمت ليحصل على رمز جديد ويلتحق بالبث الحيّ، ولا يحوّل إلى جهة بثّ أخرى ولا إلى نسخة متأخرة. التطبيق لا يرفع شيئًا. تُشير إعادة توجيه Radiojar إلى عقدة HTTP غير مشفّرة، فيرقّي التطبيق مضيفي Radiojar إلى HTTPS قبل تسليم الرابط للمشغّل.</td></tr>
+      <tr><td>٤</td><td><strong>استعلام عن الإحداثيات</strong></td><td>عندما يحتاج موقع الجهاز (GPS) إلى اسم مقروء، لا عند اختيار مدينة يدويًا</td><td><code>nominatim.openstreetmap.org</code> (OpenStreetMap / Nominatim)</td><td>خط العرض وخط الطول بخمس مراتب عشرية، ورمز اللغة، و<code>User-Agent: Zad/1.0 (Quran reading app)</code>. يُحفظ اسم المكان الناتج على جهازك. سياسة الاستخدام والسجلات والإسناد لدى Nominatim يضبطها ذلك المنفذ وحده.</td></tr>
+      <tr><td>٥</td><td><strong>البحث عن مدينة بالاسم</strong></td><td>عند كتابة اسم مدينة في شاشة اختيار الموقع فقط</td><td><code>geocoding-api.open-meteo.com</code> (تحديد مواقع Open-Meteo)</td><td>النص الذي كتبته، ورمز اللغة، وبيانات الطلب المعتادة. سجلات الاحتفاظ لدى Open-Meteo يضبطها المزوّد وحده، ولا يضبطها هذا التطبيق.</td></tr>
+      <tr><td>٦</td><td><strong>ما تختار مشاركته</strong></td><td>عند الضغط على «مشاركة» أو تصدير نسخة احتياطية فقط</td><td>التطبيق أو الجهة التي <strong>تختارها أنت</strong> من قائمة المشاركة / منتقي الملفات</td><td>نص آية أو ذِكر، أو نسخة احتياطية JSON عادية غير مشفّرة تحوي بياناتك المحلية. لا تغادر إلا لأنك طلبت المشاركة.</td></tr>
+    </table>
+    <p><strong>لا نُرسل</strong> تاريخ قراءتك، ولا علاماتك المرجعية، ولا موضع قراءتك، ولا عدّادات الأذكار، ولا إعداداتك، ولا جهات الاتصال أو الصور أو الملفات، ولا أي معرّف يولّده كود التطبيق. تُنشأ النسخة الاحتياطية محليًا في مجلد مؤقت، والتطبيق لا يرفعها أبدًا من نفسه. ولأنها <strong>نص JSON غير مشفّر</strong>، رجاءً احتفظ بها بحذر بعد تصديرها.</p>
+    <p>جمع تقارير الأعطال مفعّل في نسخ الإصدار ومعطّل في نسخ التطوير. <strong>لا يوجد مفتاح داخل التطبيق لإيقاف تقارير الأعطال.</strong></p>
+
+    <h2>٣. البيانات المحفوظة على جهازك فقط</h2>
+    <ul>
+      <li><strong>الإعدادات والسجلات</strong> في التخزين الخاص بالتطبيق: المظهر واللغة، إعدادات العرض، طريقة الحساب، مفاتيح التنبيهات ومواعيدها، القارئ المختار، <strong>الموقع الذي اخترته يدويًا</strong> (الإحداثيات واسم المدينة)، أسماء الأماكن المحفوظة، آخر موضع قراءة، العلامات المرجعية، الصفحات المقروءة اليوم، الأذكار المخصصة، عدّادات التسبيح، التقدّم والإحصاءات والأهداف.</li>
+      <li><strong>التلاوات المنزَّلة</strong> (ملفات MP3 طلبت الاحتفاظ بها) وذاكرة مؤقتة محدودة للتشغيل، في مجلد الدعم الخاص بالتطبيق.</li>
+      <li><strong>خطوط صفحات المصحف</strong> المستخرجة من الملفات المضمّنة إلى مجلد المستندات الخاص بالتطبيق. تستخدم كاشًا بحجم <strong>٥٠ ميجابايت</strong>: تُزال الملفات الأقدم عند تجاوز هذا الحد، وتظل الباقية حتى حذف التطبيق.</li>
+      <li><strong>التنبيهات المحلية المجدولة</strong> لاثني عشر يومًا، يديرها النظام، ولا تحوي سوى عنوان التذكير ووقته واسم شاشة داخلي.</li>
+      <li><strong>ملف النسخة الاحتياطية المصدَّر</strong> في المجلد المؤقت للنظام، حتى تحذفه أو تشاركه. التطبيق لا يحذفه ولا يتحكم في موعد تنظيف النظام لذلك المجلد.</li>
+    </ul>
+    <p>لا يوجد حساب على خادم، ولا قاعدة بيانات سحابية، ولا ملف تعريف للمستخدم.</p>
+
+    <h2>٤. الأذونات وسببها</h2>
+    <table>
+      <tr><th>الإذن</th><th>السبب</th></tr>
+      <tr><td>الموقع التقريبي / الدقيق</td><td>لحساب المواقيت والقبلة <strong>على جهازك</strong>. يمكنك رفضه وإدخال مدينة أو إحداثيات يدويًا، وسيظل التطبيق يعمل.</td></tr>
+      <tr><td>الإشعارات</td><td>تذكيرات المواقيت والأذكار والورد، تُجدول محليًا دون خادم إشعارات فورية.</td></tr>
+      <tr><td>جدولة تنبيهات دقيقة</td><td>استخدام تنبيهات دقيقة لهذه التذكيرات المحلية حيث يمنح أندرويد الإذن. يتحقق التطبيق من الإذن ويعود إلى التنبيهات غير الدقيقة إن لم يُمنح.</td></tr>
+      <tr><td>استقبال اكتمال الإقلاع</td><td>إعادة جدولة التذكيرات المحلية بعد إعادة تشغيل الجهاز.</td></tr>
+      <tr><td>الإنترنت</td><td>بثّ التلاوات وتنزيلها، والإذاعة الحيّة، واستعلاما الموقع، وإرسال تقارير الأعطال.</td></tr>
+      <tr><td>خدمة مقدّمة (تشغيل الوسائط) + إبقاء الجهاز مستيقظًا</td><td>لمواصلة التلاوة في الخلفية، ولإبقاء الشاشة مضاءة أثناء القراءة إن فعّلتها.</td></tr>
+      <tr><td>الاهتزاز</td><td>استجابة لمسية في السبحة، ويمكن تعطيلها.</td></tr>
+      <tr><td>حسّاس البوصلة (ميزة عتاد اختيارية)</td><td>لتوجيه مؤشر القبلة، والتطبيق يُثبَّت على الأجهزة بلا بوصلة.</td></tr>
+    </table>
+
+    <h2>٥. ما لا يفعله «زاد»</h2>
+    <ul>
+      <li>لا إعلانات ولا حزمة إعلانات.</li>
+      <li>لا حزمة تحليلات، ولا حزم تسويق أو إسناد، ولا تنميط سلوكي.</li>
+      <li>لا حسابات، ولا تسجيل دخول، ولا كلمات مرور، ولا مزامنة سحابية.</li>
+      <li>لا معرّف إعلاني، ولا أي معرّف مستخدم أو جهاز يضيفه كود التطبيق.</li>
+      <li>لا وصول إلى جهات الاتصال، أو الصور، أو الكاميرا، أو الميكروفون، أو الرسائل، أو سجل المكالمات، أو ملفاتك، باستثناء ملف النسخة الاحتياطية الذي تختاره بنفسك.</li>
+      <li>لا بيع أو تأجير أو مشاركة للبيانات لأغراض إعلانية، ولا تتبّع عبر التطبيقات أو المواقع.</li>
+    </ul>
+    <p>Crashlytics حزمة <strong>للإبلاغ عن الأخطاء</strong> لا للتحليلات. وجود خاصية Google Analytics مرتبطة بمشروع Firebase <strong>لا يعني</strong> أن هذا التطبيق يجمع بيانات تحليلات؛ فالتطبيق لا يتضمن حزمة Analytics ولا يرسل أحداث تحليلات. ولا يوجد مفتاح داخل التطبيق لإيقاف تقارير الأعطال؛ وهي مفعّلة في نسخ الإصدار فقط.</p>
+
+    <h2>٦. مدة الاحتفاظ</h2>
+    <table>
+      <tr><th>البيانات</th><th>المدة</th></tr>
+      <tr><td>الإعدادات، العلامات، موضع القراءة، العدّادات، أسماء الأماكن</td><td>حتى تضغط «إعادة ضبط بيانات التطبيق» أو تحذف التطبيق.</td></tr>
+      <tr><td>التلاوات المنزَّلة</td><td>حتى تحذفها من شاشة التنزيلات، أو تحذف التطبيق، أو يُزيل حدّ ١ جيجابايت أقدم الملفات.</td></tr>
+      <tr><td>الذاكرة المؤقتة للتشغيل</td><td>حتى تضغط «مسح ذاكرة البثّ»، أو تحذف التطبيق، أو يُزيل حدّ ١٢٨ ميجابايت أقدم الملفات.</td></tr>
+      <tr><td>خطوط المصحف</td><td>كاش حتى ٥٠ ميجابايت في مجلد المستندات الخاص بالتطبيق؛ تُزال الملفات الأقدم عند تجاوز الحد، وتُحذف الباقية عند حذف التطبيق.</td></tr>
+      <tr><td>التذكيرات المجدولة</td><td>نافذة متجددة من ١٢ يومًا، وتُلغى فور إيقاف جميع التذكيرات.</td></tr>
+      <tr><td>ملف النسخة الاحتياطية المصدَّر</td><td>حتى تحذفه أو ينظّف النظام المجلد المؤقت. التطبيق لا يتحكم في موعد تنظيف النظام.</td></tr>
+      <tr><td>تقارير الأعطال</td><td>تضبطها إعدادات مشروع Firebase وGoogle، لا كود التطبيق. تواصل معنا إذا احتجت مساعدة في العثور على هذه البيانات أو طلب حذفها.</td></tr>
+      <tr><td>سجلات مضيفي التلاوة والإذاعة والاستعلام الجغرافي</td><td>يضبطها كل مزوّد وفق سياسته؛ التطبيق لا يحدد مدد الاحتفاظ ولا يطلع على تلك السجلات.</td></tr>
+    </table>
+
+    <h2>٧. خياراتك</h2>
+    <ul>
+      <li><strong>الموقع:</strong> ارفض الإذن، أو أوقف «استخدام موقع الجهاز» واختر مدينة أو أدخل إحداثيات يدويًا. لا يُجرى استعلام إحداثيات للموقع اليدوي.</li>
+      <li><strong>الإشعارات:</strong> أوقف تذكير المواقيت وأذكار الصباح والمساء والورد؛ إيقافها جميعًا يُلغي كل التنبيهات المعلّقة.</li>
+      <li><strong>التنزيلات:</strong> احذف تلاوة واحدة، أو <strong>احذف كل التنزيلات</strong>، أو <strong>امسح ذاكرة البثّ</strong>.</li>
+      <li><strong>إعادة الضبط:</strong> تمسح الإعدادات والعلامات وموضع القراءة والعدّادات، لكنها <strong>لا تمسح</strong> التلاوات المنزَّلة ولا ذاكرة البثّ ولا الخطوط المخزّنة ولا نسخة صدّرتها — امسحها منفردةً.</li>
+      <li><strong>النسخة الاحتياطية:</strong> صدّر بياناتك إلى ملف تملكه، أو استعدها من ملف تختاره، دون رفع تلقائي.</li>
+      <li><strong>تقارير الأعطال:</strong> لا يوجد مفتاح لإيقافها داخل التطبيق؛ وهي مفعّلة في نسخ الإصدار فقط.</li>
+      <li><strong>حذف التطبيق:</strong> يزيل كل بيانات التطبيق الخاصة، بما فيها التنزيلات والخطوط المخزّنة.</li>
+      <li><strong>الاهتزاز / إبقاء الشاشة مضاءة:</strong> كلاهما إعداد اختياري.</li>
+    </ul>
+
+    <h2>٨. خصوصية الأطفال</h2>
+    <p>«زاد» تطبيق ديني لعامة المستخدمين: لا حسابات ولا تسجيل ولا دردشة ولا ميزات اجتماعية ولا ملف تعريف للمستخدم، ولا تحديد عمري، ولا حقل نص حرّ سوى البحث عن اسم مدينة. لا نجمع عن قصد بيانات شخصية من الأطفال، ولا نستخدم التطبيق للتواصل معهم.</p>
+    <p>كود التطبيق لا يحدد التصنيف العمري ولا الالتزامات القانونية التي قد تنطبق على بيانات الأطفال؛ يلزم تقدير ذلك من الناشر وفق قواعد المتجر والدول التي يُعرض فيها التطبيق.</p>
+    <p>إن تعتقد أن طفلًا زوّد التطبيق ببيانات شخصية، تواصل معنا على <a href="mailto:zad.quran.app@gmail.com" dir="ltr">zad.quran.app@gmail.com</a>.</p>
+
+    <h2>٩. خدمات الأطراف الثالثة</h2>
+    <p>يرسل التطبيق طلبات إلى: Firebase Crashlytics (Google) لتقارير أعطال نسخة الإصدار، و<code>cdn.islamic.network</code> و<code>everyayah.com</code> و<code>cdn.mp3quran.net</code> لملفات التلاوة، و<code>stream.radiojar.com</code> وعُقد <code>*.radiojar.com</code> المميّزة بالرموز للإذاعة الحيّة، و<code>nominatim.openstreetmap.org</code> لتسمية موقع الجهاز، و<code>geocoding-api.open-meteo.com</code> للبحث عن المدن. لا تصل هذه الجهات إلا إلى ما ورد في القسم ٢. سياسات الخصوصية وشروط المعالجة وسجلات الاحتفاظ الخاصة بها هي التي تحكم ما تحتفظ به، ولا يضبطها هذا التطبيق.</p>
+    <p>يُحصل على موقع الجهاز نفسه عبر واجهات تحديد الموقع في أندرويد؛ وعلى الأجهزة التي تستخدم خدمات Google قد يتضمن مزوّد نظام التشغيل جهة Google، وشأنها في ذلك شأن أي معالجة خارج كود هذا التطبيق.</p>
+
+    <h2>١٠. الأمان</h2>
+    <p>تُحفظ بياناتك في التخزين الخاص المعزول للتطبيق. العناوين التي يضبطها التطبيق للاتصال هي HTTPS. النسخة الاحتياطية المصدَّرة ملف JSON عادي <strong>غير مشفّر</strong>، فعاملها كما تعامل أي ملف تشاركه.</p>
+    <p>يُجيب <code>stream.radiojar.com</code> بإعادة توجيه إلى عقدة HTTP غير مشفّرة، فيحلّ التطبيق إعادة التوجيه بنفسه ويرقّي <strong>مضيفي Radiojar</strong> إلى HTTPS قبل تسليم الرابط للمشغّل، فيكون رابط تشغيل الإذاعة HTTPS ولا تُفعَّل صلاحية عامة للنص غير المشفّر. أما المضيفون الثالثون الآخرون وأي إعادة توجيه يصدرونها فخارج سيطرة التطبيق، ولا تضمن هذه السياسة أن كل إعادة توجيه محتملة من جهة ثالثة تظل HTTPS. وتشفير النقل داخل حزمة Crashlytics تضبطه الحزمة وGoogle، لا كود التطبيق.</p>
+
+    <h2>١١. تعديل هذه السياسة</h2>
+    <p>قد نحدّث السياسة عند تغيّر التطبيق، ويتغيّر معها تاريخ «آخر تحديث» في الأعلى، وستكون النسخة الحالية متاحة دائمًا في هذه الصفحة.</p>
+
+    <h2>١٢. التواصل معنا</h2>
+    <p>للاستفسارات أو طلبات التصحيح أو الحذف: <a href="mailto:zad.quran.app@gmail.com" dir="ltr">zad.quran.app@gmail.com</a>. الناشر: Karim Elhabbal، مصر.</p>
+  </section>
+
+  <footer>
+    © 2026 Karim Elhabbal · Zad for Android · <a href="mailto:zad.quran.app@gmail.com">zad.quran.app@gmail.com</a>
+  </footer>
+</div>
+<script>
+  function setLang(mode){
+    var en=document.getElementById('en'), ar=document.getElementById('ar');
+    en.hidden = (mode==='ar');
+    ar.hidden = (mode==='en');
+    ['en','ar','both'].forEach(function(m){
+      document.getElementById('btn-'+m).setAttribute('aria-pressed', String(m===mode));
+    });
+    // Only the language attribute changes; the Arabic section carries dir="rtl".
+    document.documentElement.lang = (mode==='ar') ? 'ar' : 'en';
+  }
+</script>
+</body>
+</html>
